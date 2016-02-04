@@ -97,9 +97,9 @@
         <div id="dates"></div>
         <div class="events">
             <div class="label">Funnel Steps:</div>
-            <input id="event_list" value= "onboarding:start, onboarding:view:passcode, onboarding:view:import, onboarding:view:upgrade">
+            <input id="event_list" value="app:install,upload:complete">
             <div class="label">Alt Path Length:</div>
-            <input id="path_length" value="4">
+            <input id="path_length" value="2">
             <div id="run">RUN</div>
         </div>
         <div id="graph"></div>
@@ -382,8 +382,8 @@
     }
     </script>
     <script type="text/cq" id="cq">
-    var EVENT_LIST = params.event_list || ['onboarding:start', 'onboarding:view:passcode', 'onboarding:view:import', 'onboarding:view:upgrade'];
-    var PATH_LENGTH =  params.path_length || "4";
+    var EVENT_LIST = params.event_list || ['app:install', 'upload:complete'];
+    var PATH_LENGTH =  params.path_length || 2;
     
     function main() {
         return Events({
